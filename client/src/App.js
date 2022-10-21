@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-rou
 import { EditarProducto } from "./components/EditarProducto";
 import { Header } from "./components/Header";
 import { NuevoProducto } from "./components/NuevoProducto";
-import { Productos } from "./components/Productos";
+import { Pacientes } from "./components/Pacientes";
 import { BrowserRouter as Switch } from "react-router-dom";
 import Aside from "./components/Aside";
 import HomeScreen from "./screens/layout/HomeScreen";
@@ -28,11 +28,11 @@ function App() {
         <Aside/>
           <Routes>
 
-            <Route path="/productos/nuevo" element={<AgendamientoPacienteScreen />} />
+            <Route path="/pacientes/nuevo" element={<AgendamientoPacienteScreen />} />
             
-            <Route path="/productos/editar/:id" element={<EditarProducto />} />
+            <Route path="/Pacientes/editar/:id" element={<EditarProducto />} />
 
-            <Route path="/listado/pacientes" element={<Productos />} />
+            <Route path="/listado/pacientes" element={<Pacientes />} />
 
             <Route path="/header/recordatorio" element={<RecordatorioScreen />} />
 

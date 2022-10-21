@@ -9,6 +9,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import Stack from "@mui/material/Stack";
+import Checkbox from "@mui/material/Checkbox";
 
 import Imagenes from "../assets/Imagenes";
 
@@ -21,10 +22,7 @@ import {
   ocultarAlertaAcction,
 } from "../actions/alertaActions";
 
-const options = [
-  { label: "AM", value: "AM" },
-  { label: "PM", value: "PM" },
-];
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const optionTimes = [
   { label: "Atencion Primera Vez", value: "APV" },
@@ -32,6 +30,13 @@ const optionTimes = [
   { label: "Cliente Regular", value: "CR" },
   { label: "Urgencia", value: "UR" },
   { label: "Otro", value: "OT" },
+];
+
+const optionRefered = [
+  { label: "Amigo", value: "AM" },
+  { label: "Familiar", value: "FA" },
+  { label: "Conocido", value: "CO" },
+  { label: "Nadie", value: "NA" },
 ];
 
 const NuevoProducto = () => {
@@ -51,10 +56,10 @@ const NuevoProducto = () => {
   // utlizar use dispatch y te crea una funcion
   const dispatch = useDispatch();
 
-  //Acceder al state del store
-  const cargando = useSelector((state) => state.productos.loading);
-  const error = useSelector((state) => state.productos.error);
-  const alerta = useSelector((state) => state.alerta.alerta);
+  // //Acceder al state del store
+  // const cargando = useSelector((state) => state.productos.loading);
+  // const error = useSelector((state) => state.productos.error);
+  // const alerta = useSelector((state) => state.alerta.alerta);
 
   //Manda a llamar el action de productoActions
   const agregarProducto = (producto) =>
@@ -77,11 +82,11 @@ const NuevoProducto = () => {
     //si no hay errores
     dispatch(ocultarAlertaAcction());
 
-    //crear el nuevo producto
-    agregarProducto({
-      nombre,
-      precio,
-    });
+    // //crear el nuevo producto
+    // agregarProducto({
+    //   nombre,
+    //   precio,
+    // });
 
     // Redireccionar
     navigate("/");
@@ -89,13 +94,13 @@ const NuevoProducto = () => {
 
   return (
     <div className="row min-vh-100">
-      <div className="col-12 col-sm-12 col-lg-12 justify-content-end">
+      <div className="col-10 col-sm-10 col-lg-10 justify-content-end">
         <h3 className="mt-3 mb-0 text-center mb-6 font-weight-bold">
           Agendamiento de pacientes
         </h3>
       </div>
 
-      <div className="col-lg-8 col-md-8 col-12 mx-auto">
+      <div className="col-lg-8 col-md-8 col-10 mx-auto">
         <div className="justify-content-center card">
           <div className="card-body">
             <h4 className="text-center mb-4 ">Agendar pacientes</h4>
@@ -229,7 +234,7 @@ const NuevoProducto = () => {
 
               <div className="d-flex align-items-center">
                 <div className="flex-grow-0">
-                <div className="form-group col-12 col-sm-6 col-lg-6">
+                  <div className="form-group col-12 col-sm-6 col-lg-6">
                     <Stack component="form" noValidate spacing={3}>
                       <TextField
                         id="date"
@@ -269,30 +274,41 @@ const NuevoProducto = () => {
                 </div>
               </div>
 
-              <div className="form-group">
-                <b>Telefono paciente</b>
-                <input
-                  type="number"
-                  className="form-control"
-                  placeholder="Telefono"
-                  name="precio"
-                  // value={precio}
-                  // onChange={(e) => setPrecio(Number(e.target.value))}
-                />
+              <div className="row">
+                <div className="form-group col-12 col-sm-6 col-lg-6">
+                <Controller
+                    name="seleccioneReferido"
+                    control={control}
+                    rules={{
+                      required: true,
+                    }}
+                    render={({ field }) => (
+                      <Select
+                        {...field}
+                        options={optionRefered}
+                        placeholder="Referido"
+                      />
+                    )}
+                  />
+                  {/* {errors.seleccioneVivero && (
+                    <small className="text-danger">
+                      Este campo es obligatorio
+                    </small>
+                  )} */}
+                </div>
+                <div className="form-group col-12 col-sm-6 col-lg-6"></div>
               </div>
-              <div className="form-group">
-                <b>Fecha de cita</b>
-                <input
-                  type="number"
-                  className="form-control"
-                  placeholder="Fecha"
-                  name="precio"
-                  disabled="true"
-                  // value={precio}
-                  // onChange={(e) => setPrecio(Number(e.target.value))}
-                />
+              <div className="row">
+                <div className="form-group col-12 col-sm-6 col-lg-6">
+                  <label htmlFor="namedInput">
+                    Atendido:
+                  </label>
+                  <Checkbox {...label} defaultChecked />
+                </div>
+                <div className="form-group col-12 col-sm-6 col-lg-6"></div>
               </div>
-              <div className="row form-group">
+
+              {/* <div className="row form-group">
                 <div className="col-12 col-sm-6">
                   <b>Hora</b>
                   <input
@@ -323,7 +339,7 @@ const NuevoProducto = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <button
                 type="submit"
