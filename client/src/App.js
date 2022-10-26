@@ -11,6 +11,7 @@ import './App.css';
 import AgendamientoPacienteScreen from "./screens/AgendamientoPacienteScreen"
 import RecordatorioScreen from "./screens/RecordatorioScreen";
 import Index from "./screens/IndexScreen"
+import Steps from "./screens/Steps"
 //Redux
 import { Provider } from "react-redux";
 import store from "./store";
@@ -27,6 +28,10 @@ function App() {
         <div className="com-container">
         <Aside/>
           <Routes>
+
+          
+          <Route path="/steps" element={<Steps />} />
+
 
             <Route path="/pacientes/nuevo" element={<AgendamientoPacienteScreen />} />
             
