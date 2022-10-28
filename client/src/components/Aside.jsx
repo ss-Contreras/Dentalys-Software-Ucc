@@ -47,7 +47,7 @@ const Aside = () => {
               padding: '20px 5px',
             }}
           >
-            Sidebar Footer
+            Tu software odontologico
           </div>
         </CDBSidebarFooter>
       </CDBSidebar>
