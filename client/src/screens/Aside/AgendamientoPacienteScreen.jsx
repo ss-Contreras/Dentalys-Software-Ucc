@@ -11,16 +11,16 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import Stack from "@mui/material/Stack";
 import Checkbox from "@mui/material/Checkbox";
 
-import Imagenes from "../assets/Imagenes";
+import Imagenes from "../../assets/Imagenes";
 
 //imagen
-import usuarioPerfil from "../assets/img/usuarioPerfil.svg";
+import usuarioPerfil from "../../assets/img/usuarioPerfil.svg";
 //Actions de redux
-import { crearNuevoProductoAction } from "../actions/productoActions";
+import { crearNuevoProductoAction } from "../../actions/productoActions";
 import {
   mostrarAlertaAction,
   ocultarAlertaAcction,
-} from "../actions/alertaActions";
+} from "../../actions/alertaActions";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
