@@ -2,10 +2,11 @@ import React, { Fragment, useEffect } from "react";
 
 //Redux
 import { useSelector, useDispatch } from "react-redux";
-import { obtenerProductosAction } from "../actions/productoActions";
-import { Producto } from "./Producto";
+import { obtenerProductosAction } from "../../actions/productoActions";
+import { Producto } from "../../components/Producto";
 
-export const Pacientes = () => {
+const Pacientes = () => {
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,6 +19,7 @@ export const Pacientes = () => {
   const productos = useSelector((state) => state.productos.productos);
   const error = useSelector((state) => state.productos.error);
   const cargando = useSelector((state) => state.productos.loading);
+
 
   return (
     <div className="mx-3">
@@ -69,3 +71,5 @@ export const Pacientes = () => {
     </div>
   );
 };
+
+export default Pacientes
