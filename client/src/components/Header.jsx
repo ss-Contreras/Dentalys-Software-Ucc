@@ -21,7 +21,7 @@ export const Header = () => {
       </Link>
       <Link
         className="btn btn nuevo-post d-block d-md-inline-block"
-        to={"/productos/nuevo"}
+        to={"/pacientes/nuevo"}
       >
         Agendamiento
       </Link>

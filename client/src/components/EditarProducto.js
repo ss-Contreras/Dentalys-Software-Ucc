@@ -42,7 +42,7 @@ export const EditarProducto = () => {
 
   return (
     <div className="row justify-content-center my-5">
-      <div className="col-md-8">
+      <div className="col-md-">
         <div className="card">
           <div className="card-body">
             <h2 className="text-center mb-4 font-weight-bold">
