@@ -28,6 +28,11 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 
+import CotizacionScreen from "./screens/pacientes/CotizacionScreen"
+import ControlAbonoScreen from "./screens/pacientes/ControlAbonoScreen.jsx"
+import EvolucionTratamientoScreen from "./screens/pacientes/EvolucionTratamientoScreen.jsx"
+
+
 function App() {
   return (
     <Router>
@@ -62,6 +67,13 @@ function App() {
             <Route path="/recordatorio" element={<RecordatorioScreen />} />
 
             <Route path="/login" element={<LoginScreen />} />
+
+
+            <Route path="/screens/cotizacion" element={<CotizacionScreen />} />
+
+            <Route path="/screens/controlAbono" element={<ControlAbonoScreen />} />
+
+            <Route path="/screens/evolucionTratamiento" element={<EvolucionTratamientoScreen />} />
 
           </Routes>
         </div>
