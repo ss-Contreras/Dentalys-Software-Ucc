@@ -1,0 +1,74 @@
+[
+  {
+    "address": "Manantial",
+    "dni": 1006876392,
+    "email": "juan@coderon.com",
+    "id": 1,
+    "lastnames": "Calderón Ortiz",
+    "names": "Juan Esteban",
+    "phone": "3123094160",
+    "photo": "url/notfound",
+    "state": "Active",
+    "username": "Kevin"
+  },
+  {
+    "address": "Manantial",
+    "dni": 1029989412,
+    "email": "gabo@coderon.com",
+    "id": 2,
+    "lastnames": "Calderón Ortiz",
+    "names": "Gabriel Santiago",
+    "phone": "31230941601",
+    "photo": "url/notfound",
+    "state": "Active",
+    "username": "Santiago"
+  },
+  {
+    "address": "Carolina",
+    "dni": 123456,
+    "email": "camilo@coderon.com",
+    "id": 3,
+    "lastnames": "Méndez Torres",
+    "names": "Juan Camilo",
+    "phone": "31230941602",
+    "photo": "url/notfound",
+    "state": "Inactive",
+    "username": "Pinzón"
+  },
+  {
+    "address": "Manantial",
+    "dni": 10068763921,
+    "email": "mao@coderon.com",
+    "id": 4,
+    "lastnames": "Calderón Ortiz",
+    "names": "Mauricio",
+    "phone": "31230941603",
+    "photo": "url/notfound",
+    "state": "Erased",
+    "username": "Usuario con contraseña encriptada"
+  },
+  {
+    "address": "Guatapé",
+    "dni": 10068763923,
+    "email": "kevin@coderon.com",
+    "id": 6,
+    "lastnames": "Rincon",
+    "names": "Kevin",
+    "phone": "31230941605",
+    "photo": "url/notfound",
+    "state": "Erased",
+    "username": "Gabito editado"
+  },
+  {
+    "address": "UCC",
+    "dni": 10068763922,
+    "email": "sergio@coderon.com",
+    "id": 5,
+    "lastnames": "Contreras",
+    "names": "Sergio",
+    "phone": "31230941604",
+    "photo": "url/notfound",
+    "state": "Erased",
+    "username": "Sergio "
+  }
+]
