@@ -1,18 +1,18 @@
 import React from 'react'
-import FormRadio from '../input/inputRadio/FormRadio';
-import FormInput from '../input/inputText/FormInput'
+import InputRadio from '../input/inputRadio/InputRadio';
+import InputText from '../input/inputText/InputText'
 
 function InputFactory(props) {
 
   return (
     <>
     {props.type === "radio" && (
-        <FormRadio
+        <InputRadio
         {...props}
         />
     )}
     {props.type !== "radio" && (
-        <FormInput
+        <InputText
         {...props}
         />
     )}

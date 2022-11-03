@@ -5,3 +5,30 @@
     row-gap: 10px;
     margin: 30px 0 30px 0;
 }
+
+.card-multiStep-container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+.card-multiStep-container__stepper{
+    position: sticky;
+    top: 100px;
+    
+}
+
+.card-multiStep-container__step{
+    margin: 0 20px 0 20px;
+}
+
+@media(max-width: 640px){
+    .card-multiStep-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    .card-multiStep-container__stepper{
+        position: static;
+        
+        
+    }
+}

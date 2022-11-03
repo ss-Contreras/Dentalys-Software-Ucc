@@ -3,7 +3,6 @@ export const Paient_info = [
         id: 1,
         name:"lastname",
         type:"text",
-        placeholder:"Apellido",
         label:"Apellido",
         pattern: "^[A-Za-z0-9]{3,16}$",
         errorMessage:
@@ -26,7 +25,6 @@ export const Paient_info = [
         id:3,
         name:"birthday",
         type:"date",
-        placeholder:"Fecha de nacimiento",
         label:"Fecha de nacimiento",
     },
     {
@@ -133,11 +131,46 @@ export const Paient_info = [
         label:"Telefono"
     },
     {
-        id:  13,
-        name:"hola",
+        id: 14,
+        name:"direccionResidencia",
+        type: "text",
+        placeholder: "Residencia",
+        label:"Residencia",
+    },
+    {
+        id: 15,
+        name:"residenciaPhone",
+        type:"number",
+        placeholder:"No.",
+        label:"Tel. Residencia",
+    },
+    {
+        id: 16,
+        name:"workaddress",
         type:"text",
-        placeholder:"hola",
-        label:"Sergio mk"
-    }
+        placeholder:"Direccion",
+        label:"Direccion Trabajo",
+    },
+    {
+        id: 17,
+        name:"companyName",
+        type:"text",
+        placeholder:"Nombre de la empresa",
+        label:"Nombre de la empresa"
+    },
+    {
+        id:18,
+        name:"companyPhone",
+        type:"number",
+        placeholder:"No.",
+        label:"Tel. Empresa",
+    },
+    {
+        id: 19,
+        name:"workPosition",
+        type:"text",
+        placeholder:"Cargo",
+        label:"Cargo"
+    },
 
 ];

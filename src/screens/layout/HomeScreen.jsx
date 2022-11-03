@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Aside from "../../components/Aside";
+import Aside from "../../components/aside/Aside";
 import { Header } from "../../components/Header";
 
 function HomeScreen() {

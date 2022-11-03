@@ -25,12 +25,12 @@ export const Medical_record_info = [
         values:[
             {
                 id:1,
-                value:"yi",
+                value:"y",
                 label:"Si"
             },
             {
                 id:2,
-                value:"ni",
+                value:"n",
                 label:"No"
             }
         ]
@@ -43,19 +43,15 @@ export const Medical_record_info = [
         values:[
             {
                 id:1,
-                value:"yo",
+                value:"y",
                 label:"Si"
             },
             {
                 id:2,
-                value:"no",
+                value:"n",
                 label:"No"
             },
-            {
-              id:3,
-              value:"ho.",
-              label:"Carlos"
-            }
+            
 
         ]
     },    

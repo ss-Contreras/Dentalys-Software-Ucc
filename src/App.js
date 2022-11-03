@@ -4,7 +4,7 @@ import { Header } from "./components/Header";
 import { NuevoProducto } from "./components/NuevoProducto";
 import { Productos } from "./components/Productos";
 import { BrowserRouter as Switch } from "react-router-dom";
-import Aside from "./components/Aside";
+import Aside from "./components/aside/Aside";
 import HomeScreen from "./screens/layout/HomeScreen";
 import './App.css';
 import MedicalRecord from "./pages/medical_record/MedicalRecord";
@@ -20,24 +20,28 @@ function App() {
     <Router>
       <Provider store={store}>
         
-
-
         <Header/>
 
-        <div className="com-container">
-        <Aside/>
-          <Routes>
+        <div className="app-container">
+          <div className="app-container__aside">
+            <Aside/>
+          </div>
+          <div className="app-container__content">
+            <Routes>
+              <Route path="/productos/nuevo" element={<AgendamientoPacienteScreen />} />
 
-            <Route path="/productos/nuevo" element={<AgendamientoPacienteScreen />} />
-            
-            <Route path="/productos/editar/:id" element={<EditarProducto />} />
+              <Route path="/productos/editar/:id" element={<EditarProducto />} />
 
-            <Route path="/listado/pacientes" element={<Productos />} />
+              <Route path="/listado/pacientes" element={<Productos />} />
 
-            <Route path="/header/recordatorio" element={<RecordatorioScreen />} />
-            <Route path="/form/medicalrecord" element={<MedicalRecord />} />
+              <Route path="/header/recordatorio" element={<RecordatorioScreen />} />
 
-          </Routes>
+              <Route path="/form/medicalrecord" element={<MedicalRecord />} />
+
+            </Routes>
+          </div>
+        
+          
         </div>
       </Provider>
     </Router>

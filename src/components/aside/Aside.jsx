@@ -12,8 +12,8 @@ import { NavLink } from 'react-router-dom';
 
 const Aside = () => {
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
-      <CDBSidebar textColor="#fff" backgroundColor="#333">
+    <div  style={{ display: 'flex', height: '85.3vh', overflow: 'scroll initial', position: 'sticky',top: '11.5vh', padding: '5px', backgroundColor: '#333', borderRadius: '10px'} }>
+      <CDBSidebar textColor="#fff" backgroundColor="#333" >
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
             Cuenta
@@ -22,24 +22,20 @@ const Aside = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="/listado/pacientes" activeClassName="activeClicked">
+            <NavLink exact  activeClassName="activeClicked" to="/listado/pacientes">
               <CDBSidebarMenuItem icon="columns">Agendamiento</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/tables" activeClassName="activeClicked">
+            <NavLink exact  activeClassName="activeClicked" to="/tables">
               <CDBSidebarMenuItem icon="table">Recordatorio</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/profile" activeClassName="activeClicked">
+            <NavLink exact  activeClassName="activeClicked" to="/profile">
               <CDBSidebarMenuItem icon="user">Pacientes</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/analytics" activeClassName="activeClicked">
+            <NavLink exact  activeClassName="activeClicked" to="/analytics">
               <CDBSidebarMenuItem icon="chart-line">Calendario</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/clinicalRecord" activeClassName="activeClicked">
+            <NavLink exact  activeClassName="activeClicked" to="/form/medicalrecord">
               <CDBSidebarMenuItem icon="chart-line">Form</CDBSidebarMenuItem>
-            </NavLink>
-
-            <NavLink exact to="/form/medicalrecord" target="_blank" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="exclamation-circle">Inventario</CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
