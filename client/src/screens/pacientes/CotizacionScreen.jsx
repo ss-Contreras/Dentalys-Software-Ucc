@@ -27,72 +27,77 @@ export default function Inputs() {
       >
         <div class="container text-center ">
           <div class="row align-items-start">
-            <div class="col">
-              <Input placeholder="NOMBRE" type="text" inputProps={ariaLabel} />
-            </div>
-            <div class="col">
-              <Input
-                placeholder="FECHA"
-                text-center
-                type="date"
-                inputProps={ariaLabel}
+            <div class="col-12 col-md-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Nombre"
+                type="text"
               />
             </div>
-            <div class="col">
-              <Input
-                placeholder="TELEFONO"
+            <div class="col-12 col-md-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Fecha"
+                type="date"
+              />
+            </div>
+            <div class="col-12 col-md-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Telefono"
                 type="number"
-                inputProps={ariaLabel}
               />
             </div>
           </div>
         </div>
 
         <div className="container text-ligh ">
-          <div className="col align-items-start">
-            <div class="col">
-              <Input
-                placeholder="DETARTRAJE"
+          <div className=" align-items-left">
+          <div class="col-12 col-md-3 mb-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Detartraje"
                 type="text"
-                inputProps={ariaLabel}
               />
             </div>
-            <div className="col">
-              <Input
-                placeholder="ALARGAMIENTO"
+            <div class="col-12 col-md-3 mb-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Alargamiento"
                 type="text"
-                inputProps={ariaLabel}
               />
             </div>
-            <div className="col">
-              <Input
-                placeholder="TEMPORAL"
+            <div class="col-12 col-md-3 mb-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Temporal"
                 type="text"
-                inputProps={ariaLabel}
               />
             </div>
-            <div className="col">
-              <Input
-                placeholder="BLANQUEAMIENTO"
+            <div class="col-12 col-md-3 mb-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Blanqueamiento"
                 type="text"
-                inputProps={ariaLabel}
               />
             </div>
-            <div className="col">
-              <Input
-                placeholder="PROTESIS"
+            <div class="col-12 col-md-3 mb-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Protesis"
                 type="text"
-                inputProps={ariaLabel}
               />
             </div>
           </div>
         </div>
         <div className="container text-ligh ">
-          <div className="col align-items-start">
-            <div className="col">
-              <Input placeholder="TOTAL" type="text" inputProps={ariaLabel} />
+          <div class="col-12 col-md-3 mb-3">
+              <input
+                className="form-control border border-terciary rounded-pill px-3"
+                placeholder="Total"
+                type="number"
+              />
             </div>
-          </div>
         </div>
       </Box>
     </div>
