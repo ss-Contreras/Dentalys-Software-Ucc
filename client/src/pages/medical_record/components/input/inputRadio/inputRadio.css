@@ -1,0 +1,60 @@
+.inputContainer-radio{
+    width: auto;
+    
+}
+.input-radio p{
+    margin: 0 0px 10px 5px;
+    
+}
+.input-radio div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
+.input-radio div div {
+    width: auto;
+    margin: 0px 5px;
+}
+.input-radio div label{
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 5px;
+    padding: 5px 15px 5px 45px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.input-radio div label:hover{
+    border: 1px solid var(--primary);
+    
+}
+.input-radio div label:before{
+   content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: none;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+.input-radio div input:checked + label{
+    padding: 5px 15px;
+    background-color: var(--primary);
+    color: var(--white);
+    
+}
+.input-radio div input:checked + label:before{
+    display: none;
+    
+}
+
+.input-radio div input{
+    display: none;
+}
