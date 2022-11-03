@@ -31,7 +31,7 @@ import store from "./store";
 import CotizacionScreen from "./screens/pacientes/CotizacionScreen"
 import ControlAbonoScreen from "./screens/pacientes/ControlAbonoScreen.jsx"
 import EvolucionTratamientoScreen from "./screens/pacientes/EvolucionTratamientoScreen.jsx"
-
+import MedicalRecord from "./pages/medical_record/MedicalRecord"
 
 function App() {
   return (
@@ -43,39 +43,48 @@ function App() {
 
         <Header />
 
-        <div className="com-container">
-          <Aside />
-          <Routes>
+        <div className="app-container">
+          <div className="app-container_aside">
+            <Aside />
+          </div>
+          <div className="app-container_content">
+            <Routes>
 
-            <Route path="aside/*" element={<AsideRoutes />} />
+              <Route path="aside/*" element={<AsideRoutes />} />
 
-            <Route path="/steps" element={<Steps />} />
-
-
-            <Route path="/agendamiento" element={<AgendamientoPacienteScreen />} />
-
-            <Route path="/pacientes" element={<PacientesScreen />} />
-
-            <Route path="/finanzas" element={<FinanzasScreen />} />
-
-            <Route path="/radiografia" element={<RadiografiaScreen />} />
-
-            <Route path="/Pacientes/editar/:id" element={<EditarProducto />} />
-
-            <Route path="/inventario" element={<InventarioScreen />} />
-
-            <Route path="/recordatorio" element={<RecordatorioScreen />} />
-
-            <Route path="/login" element={<LoginScreen />} />
+              <Route path="/steps" element={<Steps />} />
 
 
-            <Route path="/screens/cotizacion" element={<CotizacionScreen />} />
+              <Route path="/agendamiento" element={<AgendamientoPacienteScreen />} />
 
-            <Route path="/screens/controlAbono" element={<ControlAbonoScreen />} />
+              <Route path="/pacientes" element={<PacientesScreen />} />
 
-            <Route path="/screens/evolucionTratamiento" element={<EvolucionTratamientoScreen />} />
+              <Route path="/finanzas" element={<FinanzasScreen />} />
 
-          </Routes>
+              <Route path="/radiografia" element={<RadiografiaScreen />} />
+
+              <Route path="/Pacientes/editar/:id" element={<EditarProducto />} />
+
+              <Route path="/inventario" element={<InventarioScreen />} />
+
+              <Route path="/recordatorio" element={<RecordatorioScreen />} />
+
+              <Route path="/login" element={<LoginScreen />} />
+
+
+              <Route path="/screens/cotizacion" element={<CotizacionScreen />} />
+
+              <Route path="/screens/controlAbono" element={<ControlAbonoScreen />} />
+
+              <Route path="/screens/evolucionTratamiento" element={<EvolucionTratamientoScreen />} />
+
+              <Route path="/form/medicalRecord" element={<MedicalRecord />} />
+
+
+            </Routes>
+          </div>
+
+
         </div>
       </Provider>
     </Router>

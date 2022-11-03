@@ -13,8 +13,18 @@ body{
   width: 250;
 }
 
-.com-container{
+.app-container{
   display: grid;
   grid-template-columns: auto 1fr;
   text-decoration: none;
+}
+
+.app-container_aside{
+  padding: 0 0 0 5px;
+}
+
+.app-container_content{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 95%;
 }

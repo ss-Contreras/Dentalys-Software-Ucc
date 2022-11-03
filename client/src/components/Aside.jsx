@@ -50,7 +50,7 @@ const Aside = () => {
     // </aside>
 
 
-    <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
+    <div style={{ display: 'flex', height: '85.3vh', overflow: 'scroll initial', position: 'sticky', top: '11.5vh', padding: '3px', background:'#333', borderRadius: '10px'}}>
       <CDBSidebar textColor="#fff" backgroundColor="#333">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
@@ -79,6 +79,10 @@ const Aside = () => {
 
             <NavLink exact to="configuracion" target="_blank" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="lock">configuracion</CDBSidebarMenuItem>
+            </NavLink>
+
+            <NavLink exact to="/form/MedicalRecord" target="_blank" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="lock">form</CDBSidebarMenuItem>
             </NavLink>
 
           </CDBSidebarMenu>
