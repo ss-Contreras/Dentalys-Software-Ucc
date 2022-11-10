@@ -228,20 +228,15 @@ const NuevoProducto = () => {
                 </div>
               </div>
 
-              <div className="row"></div>
-
-              <div className="row"></div>
-
-              <div className="d-flex align-items-center">
-                <div className="flex-grow-0">
+              <div className="align-items-center">
                   <div className="form-group col-12 col-sm-6 col-lg-6">
                     <Stack component="form" noValidate spacing={3}>
                       <TextField
                         id="date"
-                        label="Birthday"
+                        label="Fecha"
                         type="date"
                         defaultValue="2017-05-24"
-                        sx={{ width: 220 }}
+                        sx={{ width: 258 }}
                         InputLabelProps={{
                           shrink: true,
                         }}
@@ -260,8 +255,9 @@ const NuevoProducto = () => {
                       />
                     </LocalizationProvider>
                   </div>
-                </div>
-                <div className="flex-shrink-2 col-12 col-sm-8 col-lg-8 ">
+              </div>
+              <div className="row">
+                <div className="flex-shrink-2 col-12 col-sm-12 col-lg-12 ">
                   <div className="input-group input-group-dynamic flex-column my-3">
                     <textarea
                       className="multisteps-form__textarea form-control p-0 w-auto "
@@ -276,7 +272,7 @@ const NuevoProducto = () => {
 
               <div className="row">
                 <div className="form-group col-12 col-sm-6 col-lg-6">
-                <Controller
+                  <Controller
                     name="seleccioneReferido"
                     control={control}
                     rules={{
@@ -300,9 +296,7 @@ const NuevoProducto = () => {
               </div>
               <div className="row">
                 <div className="form-group col-12 col-sm-6 col-lg-6">
-                  <label htmlFor="namedInput">
-                    Atendido:
-                  </label>
+                  <label htmlFor="namedInput">Atendido:</label>
                   <Checkbox {...label} defaultChecked />
                 </div>
                 <div className="form-group col-12 col-sm-6 col-lg-6"></div>

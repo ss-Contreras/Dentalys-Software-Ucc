@@ -26,6 +26,7 @@ const authService = {
         try {
             let parsedData = JSON.parse(data)
             return parsedData
+
         } catch (error) {
             console.log(error)
             return null

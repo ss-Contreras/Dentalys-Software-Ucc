@@ -60,7 +60,7 @@ const Aside = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="agendamiento" activeClassName="activeClicked">
+            <NavLink exact to="/agendamiento" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="columns">Agendamiento</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="pacientes" activeClassName="activeClicked">

@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa";
 export const Header = () => {
 
   return (
-    <nav style={{position:'sticky', top:'0'}} className="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-between">
+    <nav style={{position:'sticky', top:'0'}} className="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-between" id='navbarHeader'>
 
       <div className="container">
         <h1><Link to={'/'} className="text-light">Dentalys</Link></h1>
@@ -15,19 +15,19 @@ export const Header = () => {
 
       <Link
         className="btn btn nuevo-post d-block d-md-inline-block"
-        to={"/listado/pacientes"}
+        to={"/pacientes"}
       >
         Pacientes
       </Link>
       <Link
         className="btn btn nuevo-post d-block d-md-inline-block"
-        to={"/pacientes/nuevo"}
+        to={"/agendamiento"}
       >
         Agendamiento
       </Link>
       <Link
         className="btn btn nuevo-post d-block d-md-inline-block"
-        to={"/header/recordatorio"}
+        to={"/form/medicalRecord"}
       >
         Recordatorio
       </Link>
